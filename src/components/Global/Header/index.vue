@@ -64,7 +64,6 @@ const randomId = computed(() => Math.random().toString(36).substring(2, 9));
         >
           Login
         </button>
-        <!-- 0 8px 15px rgba(0,0,0,.2) -->
       </aside>
     </header>
   </section>

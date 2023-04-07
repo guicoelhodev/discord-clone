@@ -3,14 +3,14 @@
     <Header />
     <Welcome />
 
-    <div>
-      <section
-        id="home-view"
-        class="opacity-0 w-screen h-screen text-black grid place-content-center"
-      >
-        <h1 class="text-5xl">React > Vue</h1>
-        <h2 class="text-3xl">Styled components > Tailwind</h2>
-      </section>
+    <div class="relative">
+      <Background />
+      <main class="layout">
+        <section id="home-view" class="opacity-0">
+          <h1 class="text-5xl">React > Vue</h1>
+          <h2 class="text-3xl">Styled components > Tailwind</h2>
+        </section>
+      </main>
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@ import { onMounted, ref } from "vue";
 
 import Welcome from "./Welcome/index.vue";
 import Header from "../Global/Header/index.vue";
+import Background from "./Background/index.vue";
 
 onMounted(() => {
   const getIntroStatus = window.sessionStorage.getItem("@HAS_INTRO_CLONE");
