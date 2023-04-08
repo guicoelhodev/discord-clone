@@ -3,9 +3,13 @@ import { gsap } from "gsap";
 import { onMounted, ref } from "vue";
 import { Icon } from "@iconify/vue2";
 
-import Welcome from "../components/Home/Welcome/index.vue";
-import Background from "../components/Home/Background/index.vue";
-import Header from "../components/Global/Header/index.vue";
+import Welcome from "@/components/Home/Welcome/index.vue";
+import Background from "@/components/Home/Background/index.vue";
+import Header from "@/components/Global/Header/index.vue";
+import InfoSection from "@/components/Home/InfoSection/index.vue";
+
+import InfoSectionsJSON from "@/data/homeSections.json";
+const infoSectionsArr = ref(InfoSectionsJSON.info);
 
 onMounted(() => {
   const getIntroStatus = window.sessionStorage.getItem("@HAS_INTRO_CLONE");
@@ -62,36 +66,26 @@ onMounted(() => {
           </section>
         </main>
 
-        <section class="layout bg-white">
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
-          <p>sduhdsuh</p>
+        <section class="layout">
+          <ul>
+            <InfoSection v-for="item in infoSectionsArr" v-bind="item" />
+          </ul>
         </section>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style>
 .btn {
   @apply flex flex-row gap-2 items-center rounded-full px-6 font-medium h-14;
+}
+
+.section-info:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+.section-info:nth-child(odd) > section {
+  @apply md:flex-row-reverse;
 }
 </style>
