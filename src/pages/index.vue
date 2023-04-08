@@ -37,8 +37,7 @@ onMounted(() => {
           >
             <header>
               <h1 class="archivo font-black text-6xl text-center">
-                IMAGINE A <br />
-                PLACE...
+                IMAGINE A PLACE...
               </h1>
             </header>
 
@@ -70,6 +69,51 @@ onMounted(() => {
           <ul>
             <InfoSection v-for="item in infoSectionsArr" v-bind="item" />
           </ul>
+        </section>
+
+        <section class="layout">
+          <article
+            class="section-info bg-gray-100 px-8 py-32 flex flex-col items-center"
+          >
+            <h2 class="archivo font-black text-4xl sm:text-center">
+              RELIABLE CONNECTION TECHNOLOGY
+            </h2>
+            <p class="max-w-4xl mt-8">
+              Low-latency voice and video for you to chat as if you were in the
+              same room. Give a thumbs-up on video, watch friends streaming
+              their gameplay of the day, or gather a group to draw on the shared
+              screen.
+            </p>
+
+            <img
+              class="w-9/12"
+              src="@/static/svg/discord_assets/network_safety.svg"
+            />
+          </article>
+        </section>
+
+        <section class="">
+          <article
+            class="relative section-info bg-gray-100 p-4 pb-32 flex flex-col items-center"
+          >
+            <h2 class="archivo font-black text-4xl sm:text-center">
+              Shall we start your journey?
+            </h2>
+
+            <img
+              class="-translate-y-24"
+              src="@/static/svg/discord_assets/stars.svg"
+            />
+
+            <button class="btn bg-blue-700 text-white">
+              <Icon
+                icon="material-symbols:download-rounded"
+                height="30"
+                width="30"
+              />
+              Download for windows
+            </button>
+          </article>
         </section>
       </div>
     </div>
