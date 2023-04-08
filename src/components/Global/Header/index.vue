@@ -1,39 +1,11 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue2";
 import { computed, onMounted, Ref, ref } from "vue";
+import NavLinks from "@/data/navLinks.json";
 
 type INavLinks = { slug: String; path: string }[];
 
-const navLinks: Ref<INavLinks> = ref([
-  {
-    path: "/download",
-    slug: "Download",
-  },
-  {
-    path: "/nitro",
-    slug: "Nitro",
-  },
-  {
-    path: "/discover",
-    slug: "Discover",
-  },
-  {
-    path: "/safety",
-    slug: "Safety",
-  },
-  {
-    path: "/support",
-    slug: "Support",
-  },
-  {
-    path: "/blog",
-    slug: "Blog",
-  },
-  {
-    path: "/careers",
-    slug: "Careers",
-  },
-]);
+const navLinks: Ref<INavLinks> = ref(NavLinks.links);
 
 const randomId = computed(() => Math.random().toString(36).substring(2, 9));
 </script>
