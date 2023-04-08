@@ -7,6 +7,7 @@ import Welcome from "@/components/Home/Welcome/index.vue";
 import Background from "@/components/Home/Background/index.vue";
 import Header from "@/components/Global/Header/index.vue";
 import InfoSection from "@/components/Home/InfoSection/index.vue";
+import Footer from "@/components/Global/Footer/index.vue";
 
 import InfoSectionsJSON from "@/data/homeSections.json";
 const infoSectionsArr = ref(InfoSectionsJSON.info);
@@ -116,6 +117,8 @@ onMounted(() => {
           </article>
         </section>
       </div>
+
+      <Footer />
     </div>
   </div>
 </template>
