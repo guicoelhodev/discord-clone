@@ -1,9 +1,97 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { gsap } from "gsap";
+import { onMounted, ref } from "vue";
+import { Icon } from "@iconify/vue2";
 
-const name = ref("");
+import Welcome from "../components/Home/Welcome/index.vue";
+import Background from "../components/Home/Background/index.vue";
+import Header from "../components/Global/Header/index.vue";
+
+onMounted(() => {
+  const getIntroStatus = window.sessionStorage.getItem("@HAS_INTRO_CLONE");
+
+  if (getIntroStatus) {
+    gsap.to("#home-view", { opacity: 1, delay: 1, duration: 0.8 });
+  } else {
+    gsap.to("#home-view", { opacity: 1, delay: 13, duration: 0.8 });
+  }
+});
 </script>
 
 <template>
-  <Home :name="name" />
+  <div>
+    <Welcome />
+    <div id="home-view" class="opacity-0 bg-blue-600">
+      <div class="relative h-full">
+        <Header />
+        <Background />
+        <main
+          class="z-10 layout max-w-7xl mx-auto grid place-items-center m-b-4"
+        >
+          <section
+            class="max-w-2xl w-full flex flex-col items-center text-white px-4 py-2 gap-4"
+          >
+            <header>
+              <h1 class="archivo font-black text-6xl text-center">
+                IMAGINE A <br />
+                PLACE...
+              </h1>
+            </header>
+
+            <section>
+              <p class="text-center font-medium text-lg">
+                ...where you can belong to a school club, a group of gamers, or
+                a global artistic community. Where you and some friends can
+                spend time together. A place that makes it easy to chat every
+                day and socialize more often.
+              </p>
+            </section>
+
+            <footer class="flex flex-wrap gap-4 pt-4">
+              <button class="btn bg-white text-gray-900">
+                <Icon
+                  icon="material-symbols:download-rounded"
+                  height="30"
+                  width="30"
+                />
+                Download for windows
+              </button>
+
+              <button class="btn bg-gray-900">Open Discord on browser</button>
+            </footer>
+          </section>
+        </main>
+
+        <section class="layout bg-white">
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+          <p>sduhdsuh</p>
+        </section>
+      </div>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.btn {
+  @apply flex flex-row gap-2 items-center rounded-full px-6 font-medium h-14;
+}
+</style>
