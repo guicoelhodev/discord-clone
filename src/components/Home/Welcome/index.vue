@@ -1,29 +1,3 @@
-<template>
-  <div
-    id="welcome-div"
-    class="z-1 absolute inset-0 w-screen h-screen bg-stone-950 text-xl flex items-center justify-center"
-  >
-    <section class="intro-section" id="discord-intro">
-      <p>
-        This project is just a clone UI <br />
-        to pratice my front-end skills
-      </p>
-      <Icon icon="fa6-brands:discord" width="80" class="mt-4" />
-    </section>
-
-    <section class="intro-section" id="tools-intro">
-      <p>Was created with Vue and Tailwind</p>
-
-      <aside class="flex">
-        <Icon icon="mdi:vuejs" width="80" />
-        <Icon icon="mdi:tailwind" width="80" />
-      </aside>
-
-      <p>I hope that u enjoy it</p>
-    </section>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { Icon } from "@iconify/vue2";
 import { gsap } from "gsap";
@@ -70,3 +44,29 @@ onMounted(() => {
   }
 });
 </script>
+
+<template>
+  <div
+    id="welcome-div"
+    class="z-1 absolute inset-0 w-screen h-screen bg-stone-950 text-xl flex items-center justify-center"
+  >
+    <section class="intro-section" id="discord-intro">
+      <p>
+        This project is just a clone UI <br />
+        to pratice my front-end skills
+      </p>
+      <Icon icon="fa6-brands:discord" width="80" class="mt-4" />
+    </section>
+
+    <section class="intro-section" id="tools-intro">
+      <p>Was created with Vue and Tailwind</p>
+
+      <aside class="flex">
+        <Icon icon="mdi:vuejs" width="80" />
+        <Icon icon="mdi:tailwind" width="80" />
+      </aside>
+
+      <p>I hope that u enjoy it</p>
+    </section>
+  </div>
+</template>
