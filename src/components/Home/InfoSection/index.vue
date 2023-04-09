@@ -35,7 +35,7 @@ const props = defineProps({
       <article
         class="max-w-lg w-full flex flex-col justify-start items-center p-8 gap-2"
       >
-        <h2 class="archivo font-black text-4xl sm:text-center">
+        <h2 class="archivo font-black text-3xl sm:text-4xl sm:text-center">
           {{ props.title }}
         </h2>
         <p class="text-black mt-4 sm:text-center">{{ props.text }}</p>
@@ -47,11 +47,3 @@ const props = defineProps({
     </section>
   </div>
 </template>
-
-<style>
-.responsive-card {
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-</style>

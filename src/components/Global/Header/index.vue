@@ -20,7 +20,9 @@ const randomId = computed(() => Math.random().toString(36).substring(2, 9));
         <p class="roboto font-extrabold tracking-wide text-lg">DISCORD</p>
       </article>
 
-      <nav class="flex-auto flex justify-center gap-8">
+      <nav
+        class="flex-auto text-sm hidden sm:gap-2 md:flex md:justify-center md:gap-8 md:text-md"
+      >
         <nuxt-link
           v-for="link in navLinks"
           :key="randomId + link.slug"

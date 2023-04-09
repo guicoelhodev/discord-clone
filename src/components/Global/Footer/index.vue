@@ -42,8 +42,10 @@ const socialLinks: Ref<ISocialLinks[]> = ref([
 <template>
   <div class="bg-neutral-800">
     <footer class="max-w-7xl mx-auto flex flex-col">
-      <div class="flex justify-between-4 py-16">
-        <article class="max-w-lg w-full flex flex-col gap-4 p-8 pt-0">
+      <div
+        class="flex flex-col justify-between-4 py-16 md:pb-0 md:flex-row sm:flex-col"
+      >
+        <article class="w-96 flex flex-col gap-4 p-4 pt-0">
           <h3 class="uppercase archivo font-black text-4xl text-blue-600">
             Imagine a <br />place
           </h3>
@@ -64,7 +66,7 @@ const socialLinks: Ref<ISocialLinks[]> = ref([
           </nav>
         </article>
 
-        <section class="grid gap-4 grid-cols-4">
+        <section class="grid-style gap-8 p-4">
           <article class="px-2" v-for="groupObj in footerLinks">
             <span class="text-blue-600 text-lg font-medium">{{
               groupObj.group
@@ -74,7 +76,7 @@ const socialLinks: Ref<ISocialLinks[]> = ref([
                 v-for="links in groupObj.links"
                 :to="links.path"
                 :key="links.name"
-                class="text-gray-300 hover:underline hover:decoration-1"
+                class="text-gray-300 hover:underline hover:decoration-1 text-ellipsis"
                 >{{ links.name }}</nuxt-link
               >
             </ul>
@@ -83,7 +85,7 @@ const socialLinks: Ref<ISocialLinks[]> = ref([
       </div>
 
       <aside
-        class="flex justify-between m-8 border-t-2 pt-6 pb-6 border-blue-600"
+        class="flex m:4 p-4 justify-between border-t-2 pt-6 pb-6 border-blue-600 sm:m-2 sm:py-4 sm:px-0"
       >
         <div class="flex gap-2 items-center">
           <Icon icon="fa6-brands:discord" width="30" color="#fff" />
@@ -107,3 +109,21 @@ const socialLinks: Ref<ISocialLinks[]> = ref([
     </footer>
   </div>
 </template>
+
+<style scoped>
+.grid-style {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 820px) {
+  .grid-style {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1000px) {
+  .grid-style {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style>

@@ -29,7 +29,7 @@ onMounted(() => {
     <div id="home-view" class="opacity-0 bg-blue-600">
       <div class="relative h-full">
         <Header />
-        <Background />
+        <!-- <Background /> -->
         <main
           class="z-10 layout max-w-7xl mx-auto grid place-items-center m-b-4"
         >
@@ -37,13 +37,15 @@ onMounted(() => {
             class="max-w-2xl w-full flex flex-col items-center text-white px-4 py-2 gap-4"
           >
             <header>
-              <h1 class="archivo font-black text-6xl text-center">
+              <h1
+                class="archivo font-black text-4xl sm:text-5xl md:text-7xl text-center"
+              >
                 IMAGINE A PLACE...
               </h1>
             </header>
 
             <section>
-              <p class="text-center font-medium text-lg">
+              <p class="text-center font-medium sm:text-lg">
                 ...where you can belong to a school club, a group of gamers, or
                 a global artistic community. Where you and some friends can
                 spend time together. A place that makes it easy to chat every
@@ -51,7 +53,7 @@ onMounted(() => {
               </p>
             </section>
 
-            <footer class="flex flex-wrap gap-4 pt-4">
+            <footer class="flex flex-col items-center gap-4 pt-4 sm:flex-row">
               <button class="btn bg-white text-gray-900">
                 <Icon
                   icon="material-symbols:download-rounded"
@@ -87,7 +89,7 @@ onMounted(() => {
             </p>
 
             <img
-              class="w-9/12"
+              class="w-9/12 max-w-4xl"
               src="@/static/svg/discord_assets/network_safety.svg"
             />
           </article>
@@ -97,7 +99,7 @@ onMounted(() => {
           <article
             class="relative section-info bg-gray-100 p-4 pb-32 flex flex-col items-center"
           >
-            <h2 class="archivo font-black text-4xl sm:text-center">
+            <h2 class="archivo font-black text-3xl text-center sm:text-4xl">
               Shall we start your journey?
             </h2>
 
@@ -106,7 +108,7 @@ onMounted(() => {
               src="@/static/svg/discord_assets/stars.svg"
             />
 
-            <button class="btn bg-blue-700 text-white">
+            <button class="max-w-xs btn bg-blue-700 text-white">
               <Icon
                 icon="material-symbols:download-rounded"
                 height="30"
@@ -125,7 +127,7 @@ onMounted(() => {
 
 <style>
 .btn {
-  @apply flex flex-row gap-2 items-center rounded-full px-6 font-medium h-14;
+  @apply flex flex-row gap-2 items-center justify-center rounded-full px-6 font-medium h-12 text-sm sm:h-14;
 }
 
 .section-info:nth-child(even) {

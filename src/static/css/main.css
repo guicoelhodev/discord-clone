@@ -10,4 +10,10 @@
   .layout {
     min-height: 40rem;
   }
+
+  @media (max-width: 520px) {
+    .layout {
+      min-height: 30rem;
+    }
+  }
 }
