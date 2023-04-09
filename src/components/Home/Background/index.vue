@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="absolute layout z-0">
+  <div class="absolute hidden layout z-0 sm:block">
     <img
       src="../../../static/svg/discord_assets/background_large.svg"
       class="img-bg m-auto"

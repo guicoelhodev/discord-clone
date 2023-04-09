@@ -29,23 +29,23 @@ onMounted(() => {
     <div id="home-view" class="opacity-0 bg-blue-600">
       <div class="relative h-full">
         <Header />
-        <!-- <Background /> -->
+        <Background />
         <main
           class="z-10 layout max-w-7xl mx-auto grid place-items-center m-b-4"
         >
           <section
-            class="max-w-2xl w-full flex flex-col items-center text-white px-4 py-2 gap-4"
+            class="max-w-2xl w-full flex flex-col sm:items-center text-white px-4 py-2 gap-4"
           >
             <header>
               <h1
-                class="archivo font-black text-4xl sm:text-5xl md:text-7xl text-center"
+                class="archivo font-black text-4xl sm:text-5xl sm:text-center md:text-7xl"
               >
                 IMAGINE A PLACE...
               </h1>
             </header>
 
             <section>
-              <p class="text-center font-medium sm:text-lg">
+              <p class="font-medium sm:text-lg sm:text-center">
                 ...where you can belong to a school club, a group of gamers, or
                 a global artistic community. Where you and some friends can
                 spend time together. A place that makes it easy to chat every
@@ -53,7 +53,7 @@ onMounted(() => {
               </p>
             </section>
 
-            <footer class="flex flex-col items-center gap-4 pt-4 sm:flex-row">
+            <footer class="flex items-center gap-4 pt-4 sm:flex-row">
               <button class="btn bg-white text-gray-900">
                 <Icon
                   icon="material-symbols:download-rounded"
@@ -66,6 +66,11 @@ onMounted(() => {
               <button class="btn bg-gray-900">Open Discord on browser</button>
             </footer>
           </section>
+
+          <img
+            class="sm:hidden"
+            src="@/static/svg/discord_assets/hang_out.svg"
+          />
         </main>
 
         <section class="layout">
