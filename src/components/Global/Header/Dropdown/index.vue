@@ -28,7 +28,13 @@ const props = defineProps({
 });
 
 onMounted(() => {
-  console.log("opa", VueRouter.START_LOCATION.path);
+  props.links.forEach(link => {
+    if(VueRouter.START_LOCATION.path !== link.path) return;
+
+    const activeLink = document.getElementById(`${link.slug}`);
+
+    activeLink?.classList.add('active')
+  })
 });
 </script>
 
@@ -70,11 +76,11 @@ onMounted(() => {
       <nav
         class="flex flex-col gap-4 m-8 border-t-2 border-gray-200 pt-4 text-black"
       >
-        <nuxt-link to="/" class="nuxt-link">Home</nuxt-link>
         <nuxt-link
           v-for="link in props.links"
           :to="link.path"
           class="nuxt-link"
+          :id="link.slug"
           >{{ link.slug }}</nuxt-link
         >
       </nav>
@@ -92,5 +98,9 @@ onMounted(() => {
 <style scoped>
 .nuxt-link {
   @apply hover:underline hover:decoration-1 p-2 rounded-sm;
+}
+
+.active {
+  @apply bg-slate-100 text-blue-700
 }
 </style>

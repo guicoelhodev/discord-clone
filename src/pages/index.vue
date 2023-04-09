@@ -20,6 +20,7 @@ onMounted(() => {
   } else {
     gsap.to("#home-view", { opacity: 1, delay: 13, duration: 0.8 });
   }
+
 });
 </script>
 

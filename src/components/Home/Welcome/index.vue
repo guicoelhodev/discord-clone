@@ -39,6 +39,7 @@ onMounted(() => {
     fadeInAnimation("#discord-intro", 1);
     fadeInAnimation("#tools-intro", 7);
     removeAbsoluteWindow();
+    document.body.style.overflow = "auto";
   } else {
     gsap.to("#welcome-div", { display: "none" });
   }

@@ -1,6 +1,10 @@
 {
   "links": [
     {
+      "path": "/",
+      "slug": "Home"
+    },
+    {
       "path": "/download",
       "slug": "Download"
     },
