@@ -22,12 +22,12 @@ const randomId = computed(() => Math.random().toString(36).substring(2, 9));
       <nav
         class="flex-auto text-sm hidden sm:gap-2 md:flex md:justify-center md:gap-8 md:text-md"
       >
-        <nuxt-link
+        <p
           v-for="link in navLinks.slice(1,navLinks.length)"
           :key="randomId + link"
           :to="link.path"
           class="font-semibold hover:underline hover:decoration-1"
-          >{{ link.slug }}</nuxt-link
+          >{{ link.slug }}</p
         >
       </nav>
 

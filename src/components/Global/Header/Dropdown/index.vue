@@ -76,12 +76,12 @@ onMounted(() => {
       <nav
         class="flex flex-col gap-4 m-8 border-t-2 border-gray-200 pt-4 text-black"
       >
-        <nuxt-link
+        <p
           v-for="link in props.links"
           :to="link.path"
           class="nuxt-link"
-          :id="link.slug"
-          >{{ link.slug }}</nuxt-link
+          id="link.slug"
+          >{{ link.slug }}</p
         >
       </nav>
     </article>
