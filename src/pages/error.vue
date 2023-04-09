@@ -2,7 +2,7 @@
   import Header from '@/components/Global/Header/index.vue'
   import Footer from '@/components/Global/Footer/index.vue'
 </script>
-<template>
+<template #error>
   <div>
     <Header />
 
