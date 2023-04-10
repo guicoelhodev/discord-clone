@@ -2,6 +2,11 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   srcDir: "./src",
   buildDir: 'nuxt/dist',
+  target: 'static',
+  ssr: false,
+  generate: {
+    fallback: true
+  },
   head: {
     title: "Discord UI - Clone",
     htmlAttrs: {
