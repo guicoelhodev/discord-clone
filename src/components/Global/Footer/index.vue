@@ -72,12 +72,12 @@ const socialLinks: Ref<ISocialLinks[]> = ref([
               groupObj.group
             }}</span>
             <ul class="mt-2 flex flex-col gap-1">
-              <p
+              <nuxt-link
                 v-for="links in groupObj.links"
                 :to="links.path"
                 :key="links.name"
                 class="text-gray-300 hover:underline hover:decoration-1 text-ellipsis"
-                >{{ links.name }}</p
+                >{{ links.name }}</nuxt-link
               >
             </ul>
           </article>

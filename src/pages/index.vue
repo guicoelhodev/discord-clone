@@ -20,8 +20,8 @@ onMounted(() => {
   } else {
     gsap.to("#home-view", { opacity: 1, delay: 13, duration: 0.8 });
   }
-
 });
+
 </script>
 
 <template>
@@ -133,7 +133,7 @@ onMounted(() => {
 
 <style>
 .btn {
-  @apply flex flex-row gap-2 items-center justify-center rounded-full px-6 font-medium h-12 text-sm sm:h-14;
+  @apply flex flex-row gap-2 items-center justify-center rounded-full px-6 font-medium h-12 text-sm sm:h-14 cursor-pointer
 }
 
 .section-info:nth-child(even) {
