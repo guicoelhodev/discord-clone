@@ -28,6 +28,10 @@
 </center>
 
 <div>
+  <img src='./github/performance_test.png' alt='performance test'/>
+</div>
+
+<div>
   <br />
   <h2>Pages</h2>
   <br />
