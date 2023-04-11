@@ -32,11 +32,12 @@ const randomId = computed(() => Math.random().toString(36).substring(2, 9));
       </nav>
 
       <aside class="ml-auto">
-        <button
+        <nuxt-link
+        to="/login"
           class="bg-white transition-colors duration-200 text-slate-950 py-2 px-4 text-sm rounded-full hover:shadow-lg hover:text-blue-700"
         >
           Login
-        </button>
+        </nuxt-link>
       </aside>
 
       <Dropdown :links="navLinks" />
